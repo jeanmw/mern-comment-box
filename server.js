@@ -14,7 +14,7 @@ var app = express(),
 var port = process.env.API_PORT || 3001;
 
 //db config
-mongoose.connect('mongodb://jeanBot:noodles@ds115738.mlab.com:15738/mern-comment-box');
+mongoose.connect('mongodb://heroku_317rnljh:33687in0tsp8aqj2rbf9k1ijsr@ds147520.mlab.com:47520/heroku_317rnljh');
 
 //config API to use bodyParser and look for JSON in req.body
 app.use(bodyParser.urlencoded({extended: true }));
@@ -90,6 +90,6 @@ router.route('/comments/:comment_id')
 app.use('/api', router);
 
 //start server
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
   console.log(`api running on port ${port}`);
 });
