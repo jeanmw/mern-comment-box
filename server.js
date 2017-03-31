@@ -87,7 +87,7 @@ router.route('/comments/:comment_id')
   });
 
 //use router config when we call /API
-app.use('/api', router);
+app.use('https://scotch.io/tutorials/build-a-react-app-with-user-authentication/', router);
 
 //start server
 app.listen(process.env.PORT, function() {
