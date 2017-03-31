@@ -11,7 +11,7 @@ var app = express(),
     router = express.Router();
 
 // set port to env or 3000
-var port = process.env.API_PORT || 3001;
+var port = process.env.PORT || 3001;
 
 //db config
 mongoose.connect('mongodb://heroku_317rnljh:33687in0tsp8aqj2rbf9k1ijsr@ds147520.mlab.com:47520/heroku_317rnljh');
@@ -90,6 +90,6 @@ router.route('/comments/:comment_id')
 app.use('/api', router);
 
 //start server
-app.listen(process.env.PORT || port, function() {
+app.listen(process.env.PORT, function() {
   console.log(`api running on port ${port}`);
 });
