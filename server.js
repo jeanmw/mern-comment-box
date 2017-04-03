@@ -87,7 +87,7 @@ router.route('/comments/:comment_id')
   });
 
 //use router config when we call /API
-app.use('https://scotch.io/tutorials/build-a-react-app-with-user-authentication/', router);
+app.use('https://mern-comment-box-api.herokuapp.com', router);
 
 //start server
 app.listen(process.env.PORT, function() {
