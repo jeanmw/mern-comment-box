@@ -14,7 +14,7 @@ var app = express(),
 var port = process.env.PORT || 3001;
 
 //db config
-mongoose.connect('mongodb://heroku_317rnljh:33687in0tsp8aqj2rbf9k1ijsr@ds147520.mlab.com:47520/heroku_317rnljh');
+// mongoose.connect('https://mern-comment-box-api.herokuapp.com/comments');
 
 //config API to use bodyParser and look for JSON in req.body
 app.use(bodyParser.urlencoded({extended: true }));
@@ -87,7 +87,7 @@ router.route('/comments/:comment_id')
   });
 
 //use router config when we call /API
-app.use('https://mern-comment-box-api.herokuapp.com', router);
+app.use('https://mern-comment-box-api.herokuapp.com/comments', router);
 
 //start server
 app.listen(process.env.PORT, function() {
