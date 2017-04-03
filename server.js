@@ -68,6 +68,7 @@ router.route('/comments')
 
 router.route('/comments/:comment_id')
   .put(function(req, res) {
+    console.log("to update: ", req.params.comment_id);
     Comment.findById(req.params.comment_id, function(err, comment){
       if(err){res.send(err)}
       (req.body.author) ? comment.author = req.body.author : null;
