@@ -64,13 +64,13 @@ class Comment extends Component {
           ? (<form onSubmit={ this.handleCommentUpdate }>
               <input
                 type='text'
-                placeholder='Update name...'
+                placeholder={this.props.author}
                 style={ style.commentFormAuthor }
                 value={ this.state.author }
                 onChange={ this.handleAuthorChange } />
               <input
                 type='text'
-                placeholder='Update your comment...'
+                placeholder={this.props.text}
                 style={ style.commentFormText }
                 value={ this.state.text }
                 onChange={ this.handleTextChange } />

@@ -14,7 +14,7 @@ var app = express(),
 var port = process.env.PORT || 3001;
 
 //db config
-// mongoose.connect('https://mern-comment-box-api.herokuapp.com/comments');
+// mongoose.connect('MLABS URI');
 
 //config API to use bodyParser and look for JSON in req.body
 app.use(bodyParser.urlencoded({extended: true }));
